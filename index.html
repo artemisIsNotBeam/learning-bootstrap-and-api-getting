@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -23,17 +22,31 @@
 </head>
 
 <body>
-	<ul class="nav justify-content-center">
+ <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link active" href="#">Active</a>
+    <a class="nav-link active" data-toggle="tab" href="#list-view">List View</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Movie Details</a>
+    <a class="nav-link" data-toggle="tab" href="#movie-details">Movie Details</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Image</a>
+    <a class="nav-link" data-toggle="tab" href="#link">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
   </li>
 </ul>
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="list-view">
+			<h1>List View</h1>
+	</div>
+	<div class="tab-pane fade" id="movie-details">
+			Movie Details
+	</div>
+	<div class="tab-pane fade" id="link">
+			Link
+	</div>
+  </div>
 </body>
 
 </html>
