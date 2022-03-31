@@ -10,11 +10,11 @@ $(
       success: function(data,textStatus,jqXHR)
         {
           console.log("hello");
-					let Search = data["Search"]
-					for (let i=0;i<Search.length;i++){
-						let Move = Search[i];
-						console.log(Move["Title"]);
-						console.log(Move["Year"]);
+					let Search = data["Search"];
+					let movieData = Search;
+					for (let x=0;x<Search.length;x++){
+						$("#list-view > table > tbody").append("<tr><td><p class='atitle'>"+movieData[x]["Title"]+"</p></td><td>"+movieData[x]["Year"]+"</td> <td><img width =125px height=200px src="+movieData[x]["Poster"]+"></td></tr>");
+
 					}
         },
       error: function()
